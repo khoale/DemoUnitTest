@@ -22,8 +22,9 @@ namespace DemoUnitTest
             var countNegative = numbers.Count(x => x < 0);
             var countPositive = numbers.Count(x => x > 0);
             var sum = numbers.Sum();
+            var count = numbers.Count();
 
-            return countNegative == countPositive && sum == 0;
+            return countNegative == countPositive && sum == 0 && (countNegative + countPositive) == count;
         }
     }
 }
